@@ -1,0 +1,384 @@
+\documentclass{article}
+
+% Document Info
+\author{Oliver Brotchie}
+\title{A Catechumen's Handbook.}
+
+\linespread{1.2}
+
+% Packages
+\usepackage[margin=3cm]{geometry}
+\usepackage{multicol}
+\usepackage{ifthen}
+\usepackage{xifthen}
+\usepackage{xcolor}
+
+\begin{document}
+% Commands for service text
+\newenvironment{service}{%
+  \begin{trivlist}%
+  \setlength\itemsep{1em}%
+}{%
+  \end{trivlist}%
+}
+
+\newcommand{\alt}[1]{%
+  \begin{color}{red}#1\end{color}%
+}
+
+\newcommand{\entry}[2][]{%
+  \item\ifthenelse{\isempty{#1}}%
+    {#2}%
+    {\textbf{#1:} #2}%
+}
+
+\newcommand{\abr}[1]{%
+  \begin{center}\vspace{-1.5em}\item \textit{#1}\end{center}%
+}
+
+\newcommand{\rest}{%
+  \begin{center}\vspace{-2em}\item \alt{\textbf{. . .}}\end{center}%
+}
+
+\newcommand{\instruction}[1]{%
+  \alt{\item\vspace{1em}\textit{#1}\vspace{1em}}%
+}
+
+\newcommand{\psalm}[2]{%
+  \item\textbf{Psalm #1}\\%
+  #2%
+}
+
+% Common Prayers
+\newcommand{\glory}{Glory to the Father, and to the Son, and to the Holy Spirit}
+\newcommand{\bothnow}{Both now and forever, and to the ages of ages}
+\newcommand{\glorybothnow}{\glory; \bothnow. Amen.}
+\newcommand{\mercy}[1]{Lord, have mercy. \alt{(x#1)}}
+\newcommand{\alleluia}{Alleluia, Alleluia, Alleluia. Glory to you, O God. \alt{(x3)}}
+\newcommand{\ourfather}{%
+  Our Father, in heaven, may your name be hallowed; your kingdom come;
+  your will be done on earth as in heaven. Give us today our daily bread,
+  and forgive us our debts, as we forgive our debtors. And do not lead
+  us into temptation, but deliver us from the evil one.
+}
+\newcommand{\trisagion}{
+  Holy God, Holy Strong, Holy Immortal, have mercy on us. \alt{(x3)}
+  \item \glorybothnow
+  \item All-holy Trinity, have mercy on us. Lord, cleanse us from our sins.
+  Master, pardon our iniquities. Holy One, visit and heal our infirmities
+  for your name's sake.
+  \item \mercy{3}
+  \item \glorybothnow
+  \item \ourfather
+}
+
+% Psalms
+
+\maketitle
+\pagebreak
+\tableofcontents
+\pagebreak
+\section{The Service of Matins}
+\subsection{Introduction}
+\label{matins-intro}
+\begin{service}
+\instruction{
+  After the Dismissal of the Midnight Office the Priest, 
+  having made the customary metania to the Superior, or to his stall,
+  enters the sanctuary and makes three bows before the holy Table.
+  He puts on the Epitrachelion and, standing in front of the Holy Table.
+}
+\begin{multicols}{2}
+\entry[Priest]{
+  Blessed is our God, always, now and for ever, and to the ages of ages.
+}
+\entry[People]{
+  Amen.
+}
+\instruction{
+  The Priest blesses the incense and begins to cense the sanctuary and
+  the whole church as usual.
+}
+\entry[Reader]{
+  Glory to You, our God, Glory to You.
+  \item Heavenly King, comforter, Spirit of truth, Who are present everywhere
+  filling all things, treasury of good things and giver of life, come
+  and dwell in us, cleanse us of every stain and O Good One save our
+  souls.
+  \item \trisagion
+}
+\entry[Priest]{
+  For yours is the kingdom, the power and the glory, of the Father,
+  the Son and the Holy Spirit, now and for ever, and to the ages of ages.
+}
+\entry[Reader]{
+  \mercy{12}
+  \item \glorybothnow
+  \item Come, let us worship and fall down before the King our God.
+  Come, let us worship and fall down before Christ the King our God.
+  Come, let us worship and fall down before Christ himself, the King, our God.
+}
+\end{multicols}
+\pagebreak
+\subsection{The Royal Psalms}
+\label{matins-royal}
+\instruction{
+  The Royal Psalms are read before serving a Liturgy; for daily Matins, continue to Section \ref{matins-litany-before-six-psalms}.
+}
+\begin{multicols}{2}
+\psalm{19}{
+  May the Lord hear you in the day of trouble; may the name of the God of Jacob
+  shield you. May he send you his help from the holy place, and support 
+  you from Sion. May he remember your every sacrifice, and accept with favour
+  your whole burnt offering. May the Lord give you your heart's desire, and
+  fulfil your every purpose. We shall rejoice in your salvation, and be
+  magnified in the name of our the Lord our God. May the Lord fulfil all
+  your petitions. Now I know that the Lord has saved his Christ.
+  He will hear him from his holy heaven; in mighty acts is the salvation 
+  of his right hand. Some put their trust in chariots and some in horses,
+  but we will call on the name of the Lord our God. They were fettered 
+  and fell, but we have risen and been set upright. Lord, save the king, 
+  and hear us on the day we call upon you.
+}
+\psalm{20}{
+  The king will rejoice in your power, O Lord, he will exult exceedingly 
+  in your salvation. You gave him his heart's desire; you did not deny
+  him the request of his lips. For you came to meet him with blessings
+  of goodness; you placed a crown of precious stones upon his head.
+  He asked you for life, and you gave him length of days for age on age.
+  Great is his glory because of your salvation; you will place on him
+  glory and majesty. For you will give him blessing for age on age,
+  and make him glad with the joy of your countenance. For the king
+  puts his hope in the Lord, and through the mercy of the Most High
+  he will not be shaken. May your hand light upon all your enemies,
+  and your right hand find out all who hate you. You will make them
+  like a blazing oven at the time of your presence. The Lord will
+  confound them in his wrath and fire will devour them. You will
+  destroy their offspring from the earth, and their seed from among
+  the children of mankind. Because they intended evils against you,
+  and devised plans by which they can in no way succeed. For you will
+  put them to flight; among your remnants you will prepare their
+  presence. Be exalted, Lord, in your power; we will sing and praise
+  your mighty acts.
+}
+\entry[Reader]{
+  \trisagion
+}
+\entry[Priest]{
+   For yours is the kingdom, the power and the glory, of the Father,
+   the Son and the Holy Spirit, now and for ever, and to the ages of ages.
+}
+\entry[People]{
+  Amen.
+}
+\pagebreak
+\end{multicols}
+\pagebreak
+\subsection{Prayers and Litany before the Six Psalms}
+\label{matins-litany-before-six-psalms}
+\instruction{
+  The priest must take care that he is standing beneath the Polyeleos 
+  to say this conclusion. He then enters the sanctuary, puts away the
+  censer and takes his stand in front of the Holy Table. 
+}
+\begin{multicols}{2}
+\entry[Reader]{
+  Lord, save your people, and bless your inheritance, granting to faithful
+  Christians victory over their enemies, and guarding your commonwealth
+  by your Cross.
+  \abr{Glory.}
+  \item Lifted up on the Cross of your own will, to the new commonwealth
+  that bears your name grant your mercies, Christ God; make your faithful
+  people glad by your power, granting them victories over their enemies;
+  may they have your help in battle: a weapon of peace, an invincible trophy.
+  \abr{Both now.}
+  \item Dread Champion who cannot be put to shame, do not despise our
+  petitions, O Good One. All-praised Mother of God establish the commonwealth
+  of the Orthodox, save your people and give them victory from heaven, for
+  you gave birth to God, O only blessed one. 
+}
+\entry[Priest]{
+  Have mercy on us, O God, according to your great mercy. We pray you,
+  hear and have mercy. 
+}
+\entry[People]{
+  \mercy{3}
+}
+\entry[Priest]{
+  For you, O God, are merciful, and love mankind, and to you we give
+  glory, to the Father, the Son and the Holy Spirit, now and for ever and 
+  to the ages of ages. 
+}
+\entry[People]{
+  Amen.
+}
+\entry[Reader]{
+  In the name of the Lord, bless Father.
+}
+\entry[Priest]{
+  Glory to the holy, consubstantial, life-giving and undivided Trinity,
+  always, now and for ever, and to the ages of ages. 
+}
+\entry[People]{
+  Amen.
+}
+\end{multicols}
+\pagebreak
+\subsection{The Six Psalms}
+\label{matins-six-psalms}
+\instruction{ 
+  And we begin the Six Psalms, listening with complete silence and compunction.
+  During the Six Psalms the Priest reads the Twelve Morning Prayers.
+  The Superior, or the designated reader, with devotion and fear of God reads.
+  \footnote{
+    The Six Psalms should be read by one reader, not divided between several. 
+    They are one of the gerontika, that is the parts normally read by the Superior,
+    and should be allocated to a senior person, such a visiting priest. All should
+    remain standing during the Six Psalms. 
+  }
+}
+\begin{multicols}{2}
+\entry[Reader]{
+  Glory to God in the highest, and peace on earth, goodwill among men.\alt{(x3)}
+  \item Lord, you will open my lips, and my mouth will declare your praise. \alt{(x2)}
+}
+\psalm{3}{
+  Lord, why have those who afflict me been multiplied? Many rise against me.
+  Many say to my soul, "There is no salvation for him in his God". But you,
+  Lord, are my helper, my glory, and the one who lifts up my head. With my
+  voice, I cried to the Lord, and he heard me from his holy mountain. I lay
+  down and slept; I awoke, because the Lord will assist me. I will not be afraid
+  of tens of thousands of people who surround me. Rise, Lord, save me, my
+  God; because you have struck all who are vainly my foes. You have smashed
+  the teeth of sinners. Salvation is the Lord's, and your blessing is upon your
+  people.
+  \abr{And again}
+  \item I lay down and slept; I awoke because the Lord will assist me.
+}
+\psalm{37}{
+  Lord, do not rebuke me in your anger, nor chastise me in your wrath. For
+  your arrows have been stuck fast in me, and you have laid a heavy hand upon
+  me. There is no healing in my flesh on account of your wrath, nor peace in my
+  bones on account of my sins. My iniquities flooded over my head; like a heavy
+  burden they weighed heavily upon me. My wounds stank and festered on account of
+  my foolishness. I was wretched and utterly bowed down; I went about mourning 
+  all day long. For my loins were filled with mockings, and there is no healing
+  in my flesh. I was maltreated and humiliated exceedingly; I howled from the
+  groaning of my heart. Lord, all my desire is before you, and my groaning was
+  not hidden from you. My heart was troubled, my strength failed me; and even the
+  light of my eyes had gone from me. My friends and my neighbours drew near and
+  stood against me, and those nearest me stood far away. Those who sought my life
+  used force, and those who sought evils for me spoke vanities, and meditated
+  trickeries all day long. But I, like a deaf man, heard nothing; like one who is
+  dumb, who does not open his mouth. So I became like one who cannot hear, and in
+  whose mouth there are no rebukes. For in you, Lord, I have hoped; you will
+  answer me, O Lord my God. For I  said: Let my foes never exult over me.
+  When my foot slipped they crowed over me. For I am ready for blows and my pain
+  is with me continually. For I will declare my iniquity and be troubled at my sin.
+  But my enemies live and have prevailed over me, and those who hate me unjustly
+  have been multiplied. Those who repay me with evils in place of good have
+  slandered me, since I pursued goodness. Do not forsake me, Lord; my God, do not
+  go far from me. Hasten to help me, Lord of my salvation.
+  \abr{And again.}
+  \item Do not forsake me, Lord; my God, do not go far from me. Hasten to help me,
+  Lord of my salvation. 
+}
+\psalm{62}{
+  O God, my God, I watch for you at dawn; my soul has thirsted for you, my flesh
+  how often in a desert, untrodden and waterless land. Thus I appeared before you
+  in the holy place, to see your power and your glory. For your mercy is better than
+  life; my lips will praise you. So I will bless you as long as I live, and in your
+  name I will lift up my hands. May my soul be filled as with marrow and fatness;
+  my mouth will praise you with joyful lips. When I remembered you upon my bed, every
+  dawn I meditated upon you. For you became my helper, and in the shelter of your
+  wings I shall rejoice. My soul clung to you; and your right hand upheld me.
+  But those who vainly sought my life will go down to the deepest parts of the earth,
+  they will be delivered to the power of the sword, they will be portions for foxes.
+  But the king will rejoice in God, and all who swear by him will be praised; for
+  the mouths of those who speak iniquities have been stopped.
+  \abr{And again.}
+  \item Every dawn I meditated upon you, for you became my helper, and in the shelter
+  of your wings I shall rejoice. My soul clung to you; and your right hand upheld me. 
+}
+\rest
+\entry{
+  \glorybothnow
+  \item \alleluia
+  \item \mercy{3}
+  \item \glorybothnow
+}
+\rest
+\psalm{87}{
+  Lord, God of my salvation, I have cried by day, and by night also before you.
+  Let my prayer come into your presence, and turn you ear to my supplication.
+  For my soul was filled with evils, and my life drew near to Hell. I was reckoned
+  among those that go down to the Pit; I became as one that has no help, free among
+  the dead. Like the slain that sleep in the tomb, whom you remembered no more; and they
+  were cut off from your power. They placed me in the lowest Pit; in darkness and in the
+  shadow of death. Your wrath lay heavy upon me, and you brought all your waves against
+  me. You put my friends far from me, and made me an abomination to them. I was
+  handed over and I came out; my eyes grew weak because of my beggary. I cried to you,
+  Lord, all the day; I stretched out my hands towards you. Will you work wonders for
+  the dead; or will physicians raise them up again to praise you? Will any declare your
+  mercy in the tomb, or your truth in the place of destruction? Will your wonders be
+  known in the dark, or your righteousness in a land that has been forgotten? But to you,
+  Lord, I have cried, and in the morning my prayer will come before you. Why have you
+  rejected my soul, Lord; why do you turn away your face from me? I am poor and in toils
+  since my youth; exalted, I was humbled and brought to despair. Your fierce anger
+  overwhelmed me, and your terrors appalled me. They surrounded me like water all day
+  long; they closed in upon me from every side. Friend and neighbour you have put far
+  from me, and my companions because of my misery.
+  \abr{And again.}
+  \item Lord, God of my salvation, I have cried by day; and by night also before you.
+  Let my prayer come into your presence, and turn your ear to my supplication.
+  \footnote{
+    The priest comes from the Altar and reads the morning prayers quietly. 
+  }
+}
+\psalm{102}{
+  Bless the Lord, O my soul, and all that is within me, bless his holy name.
+  Bless the Lord, O my soul, and forget none of his benefits. He forgives all your
+  iniquities; he heals all your diseases; he redeems your life from corruption
+  and crowns you with mercy and compassion; he satisfies your desire with
+  good things; your youth will be renewed like an eagle's. The Lord performs
+  deeds of mercy and judgement for all who are oppressed. He made known his
+  ways to Moses, his wishes to the children of Israel. The Lord is compassionate
+  and merciful, long-suffering and full of mercy. He will not always be wrathful,
+  nor will he be enraged for ever. He has not dealt with us according to our
+  iniquities, nor rewarded us according to our sins. For, like the height of
+  heaven above the earth, the Lord has made his mercy prevail over those that
+  fear him. As far as the east is from the west, so far has he taken our sins from
+  us. As a father takes pity on his children the Lord has taken pity on those who
+  fear him. For he knows of what we are made; has remembered that we are but dust.
+  As for man, his days are but as grass, he will blossom like a flower of the
+  field; for when a wind has passed over it, it will be no more and will know its
+  place no longer. But the mercy of the Lord is for ever and ever upon those
+  who fear him; and his justice upon their children's children, upon those who
+  keep his covenant and remember his commandments to do them. The Lord
+  has prepared his throne in heaven and his kingdom rules over all. Bless the
+  Lord, all you his Angels, powerful in strength, who perform his word, and
+  listen to the voice of his words. Bless the Lord, all you his Powers, his
+  Ministers who do his will. Bless the Lord, all you his works. In every place
+  of his dominion, bless the Lord, O my soul!
+  \abr{And again.}
+  \item In your justice hear me, O Lord; and do not enter into judgement with
+  your servant. \alt{(x2)}
+  \item Your good Spirit will guide me in an upright land.
+}
+\rest
+\entry{
+  \glorybothnow
+  \item \alleluia
+}
+\end{multicols}
+\pagebreak
+\subsection{Litany of Peace}
+\label{matins-litany-of-peace}
+\instruction{ 
+  The Priest, having kissed the icon of the Lord, stands in front of the Holy
+  Doors.
+}
+\begin{multicols}{2}
+\end{multicols}
+\end{service}
+\end{document}
