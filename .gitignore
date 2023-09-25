@@ -1,5 +1,6 @@
 # Custom
 *.pdf
+*.aspell.**
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
