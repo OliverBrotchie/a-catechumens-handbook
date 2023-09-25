@@ -1,2 +1,9 @@
 #!/bin/sh
-echo $1 | entr sh -c "latexindent -s -o $1 $1 && aspell --home-dir=. --personal=$1.dict -t -c $1 && pdflatex $1"
+
+file=$1
+filename="${file%.*}"
+
+echo $1 | entr sh -c "latexindent -s -o $file $file &&
+  aspell --home-dir=. --personal=$filename.dict -t -c $file && 
+  pdflatex -jobname=$filename.step $file &&
+  mv $filename.step.pdf $filename.pdf";
