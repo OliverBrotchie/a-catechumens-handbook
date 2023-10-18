@@ -10,7 +10,7 @@
 
 
 % Packages
-\usepackage[margin=3cm]{geometry}
+\usepackage[top=3cm,left=3cm,right=3cm,bottom=3cm]{geometry}
 \usepackage{multicol}
 \usepackage{ifthen}
 \usepackage{xifthen}
@@ -25,13 +25,9 @@
 	\end{trivlist}%
 }
 
-\newcommand{\alt}[1]{%
-	\begin{color}{red}#1\end{color}%
-}
+\newcommand{\alt}[1]{\begin{color}{red}#1\end{color}}
 
-\newcommand{\altit}[1]{%
-	\alt{\textit{#1}}%
-}
+\newcommand{\altit}[1]{\alt{\textit{#1}}}
 
 \newcommand{\breakcol}{%
 	\vfill\null%
@@ -45,20 +41,18 @@
 }
 
 \newcommand{\abr}[1]{%
-	\begin{center}\vspace{-1.5em}\item \textit{#1}\end{center}%
+	\begin{center}\vspace{-1.5em}\item\textit{#1}\end{center}%
 }
 
 \newcommand{\rest}{%
-	\begin{center}\vspace{-2em}\item \alt{\textbf{. . .}}\end{center}%
+	\begin{center}\vspace{-2em}\item\alt{\textbf{. . .}}\end{center}%
 }
 
-\newcommand{\andagain}{\abr{\alt{And again.}}}
+\newcommand{\andagain}{\vspace{-0.1em}\abr{\alt{And again.}}}
 
-\newcommand{\andsoafter}{\alt{\textit{And so after each petition.}}}
+\newcommand{\andsoafter}{ \alt{\textit{And so after each petition.}}}
 
-\newcommand{\instruction}[1]{%
-	\alt{\item\vspace{1em}\textit{#1}\vspace{1em}}%
-}
+\newcommand{\instruction}[1]{\item\alt{\vspace{1em}\textit{#1}\vspace{1em}}}
 
 \newcommand{\psalm}[2]{%
 	\item\textbf{Psalm #1}\\%
@@ -190,7 +184,8 @@
 	\subsection{The Royal Psalms}
 	\label{matins-royal}
 	\instruction{
-		The Royal Psalms are read before serving a Liturgy; for daily Matins, continue to Section \ref{matins-litany-before-six-psalms}.
+		The Royal Psalms are read before serving a Liturgy; for daily Matins, continue to Section
+		\ref{matins-litany-before-six-psalms}.
 	}
 	\begin{multicols}{2}
 		\psalm{19}{
@@ -264,21 +259,29 @@
 			of the Orthodox, save your people and give them victory from heaven, for
 			you gave birth to God, O only blessed one.
 		}
+		\rest
+		\subheading{Litany before the Six Psalms}
 		\entry[Priest]{
 			Have mercy on us, O God, according to your great mercy. We pray you,
 			hear and have mercy.
 		}
+		\columnbreak
 		\entry[People]{
 			\mercy{3} \andsoafter
 		}
 		\entry[Priest]{
-			For you, O God, are merciful, and love mankind, and to you we give
+			For our Archbishop \alt{N.}, for the honoured order of presbyters, for the diaconate
+			in Christ, for all the clergy and the people, let us pray to the Lord.
+			\item For our sovereign \alt{(lady/lord)}, \alt{N.}, the Royal Family, \alt{(his/her)} Government,
+			and all in authority, let us pray to the Lord.
+			\item For you, O God, are merciful, and love mankind, and to you we give
 			glory, to the Father, the Son and the Holy Spirit, now and for ever and
 			to the ages of ages.
 		}
 		\entry[People]{
 			Amen.
 		}
+		\rest
 		\entry[Reader]{
 			In the name of the Lord, bless Father.
 		}
@@ -363,6 +366,7 @@
 			they will be delivered to the power of the sword, they will be portions for foxes.
 			But the king will rejoice in God, and all who swear by him will be praised; for
 			the mouths of those who speak iniquities have been stopped.
+			\vspace{-1em}
 			\andagain
 			\item Every dawn I meditated upon you, for you became my helper, and in the shelter
 			of your wings I shall rejoice. My soul clung to you; and your right hand upheld me.
@@ -428,6 +432,27 @@
 			Ministers who do his will. Bless the Lord, all you his works. In every place
 			of his dominion, bless the Lord, O my soul!
 			\andagain
+			\item In every place of his dominion, bless the Lord, O my soul!
+		}
+		\psalm{142}{
+			Lord, hear my prayer; in your truth give ear to my supplication, and in your
+			righteousness hear me. Do not enter into judgement with your servant, for in
+			your sight no one living can be justified. For the enemy pursued my soul;
+			humbled my life to the ground; made me dwell in darkness, like those for
+			ever dead. My spirit in me grew weary, and my heart was troubled within
+			me. I remembered days of old; I meditated on all your works. I made the
+			works of your hands my meditation. I stretched out my hands towards you;
+			my soul thirsted for you like a waterless land. Hear me swiftly, O Lord; my
+			spirit has failed. Do not turn your face from me, or I shall be like those
+			who go down to the Pit. Make me hear of your mercy in the morning, for I have
+			hoped in you. Make known to me the way in which I should walk, for to you I
+			have lifted up my soul. Deliver me from my enemies, Lord; I have run to you
+			for shelter. Teach me to do your will, for you are my God. Your good Spirit
+			will guide me in an upright land. For your name's sake, O Lord, you will give
+			me life. In your justice you will bring my soul out of trouble; in your mercy
+			slay my enemies, and destroy all those who afflict my soul, for
+			I am your servant.
+			\andagain
 			\item In your justice hear me, O Lord; and do not enter into judgment with
 			your servant. \alt{(x2)}
 			\item Your good Spirit will guide me in an upright land.
@@ -450,7 +475,7 @@
 			In peace, let us pray to the Lord.
 		}
 		\entry[People]{
-			Lord, have mercy. \andsoafter
+			Lord, have mercy.\andsoafter
 		}
 		\entry[Priest]{
 			For the peace from on high and for the salvation of our souls, let us pray to
@@ -649,9 +674,13 @@
 			righteous he will judge the ends of the earth.He will give strength
 			to our kings; and exalt the horn of his anointed ones.
 		}
-		\rest
-		\shortlitany
-		\rest
+	\end{multicols}
+	\pagebreak
+	\item
+	\shortlitany
+	\rest
+	\vspace{0.5em}
+	\begin{multicols}{2}
 		\cannon[Glory to your power O Lord.]
 		{Model Ode IV}{
 			O Lord, I heard your report and was afraid; Lord I considered your works
@@ -704,9 +733,11 @@
 			\item Those who preserve vain and foolish things have forsaken their own
 			Mercy. I will pay you. O Lord, whatever I have vowed, for my salvation.
 		}
-		\rest
-		\shortlitany
-		\rest
+	\end{multicols}
+	\rest
+	\shortlitany
+	\pagebreak
+	\begin{multicols}{2}
 		\instruction{
 			The Kontakion and Okos are then read if available, followed by the
 			Synaxarion of the day.
@@ -753,7 +784,7 @@
 			Spirit, we praise the Lord, and exalt him above all for ever.
 		}
 	\end{multicols}
-	\rest
+	\pagebreak
 	\subheading{
 		The Magnificat
 	}
@@ -766,6 +797,7 @@
 	}
 	\vspace{2em}
 	\entry{
+		\begin{center}\textbf{Chorus}\end{center}
 		Greater in honour than the Cherubim, and beyond compare more glorious than the
 		Seraphim, without corruption you gave birth to God the Word, truly the Mother
 		of God, we magnify you.
@@ -785,32 +817,33 @@
 		\item\alt{[B]} He has helped Israel his servant in remembrance of his mercy, as he spoke
 		to our fathers, Abraham and his seed for ever.
 	}
-	\pagebreak
-	\begin{multicols}{2}
-		\cannon[Zachary blesses the birth of his child.]
-		{Model Ode IX}{
-			Blessed be the God of Israel, for he has visited and redeemed his people.
-			And has raised up a horn of salvation for us in the house of his servant
-			David. As he spoke by the mouth of his holy prophets, who have been since
-			the world began. Salvation from our enemies and from the hand of all who
-			hate us. To perform the mercy promised to our fathers, and to remember
-			his holy covenant.
-			\item The oath which he swore to our father Abraham, to grant us that
-			without fear we, being delivered from the fear of our enemies. Might
-			serve him in holiness and righteousness before him all the days of
-			our life.
-			\abr{Glory.}
-			\item And you, child, will be called the prophet of the Highest, for you
-			will go before the Lord to prepare his ways. To give knowledge of
-			salvation to his people by the forgiveness of their sins through the
-			tender mercy of our God.
-			\abr{Both now.}
-			\item  By which the Dayspring from on high has visited us, to appear to
-			those who sit in darkness and in the shadow of death. To guide our feet
-			into the way of peace.
-		}
-	\end{multicols}
 	\rest
+	\vspace{0.5em}
+	\cannon[Zachary blesses the birth of his child.]
+	{Model Ode IX}{
+		Blessed be the God of Israel, for he has visited and redeemed his people.
+		And has raised up a horn of salvation for us in the house of his servant
+		David. As he spoke by the mouth of his holy prophets, who have been since
+		the world began. Salvation from our enemies and from the hand of all who
+		hate us. To perform the mercy promised to our fathers, and to remember
+		his holy covenant.
+		\item The oath which he swore to our father Abraham, to grant us that
+		without fear we, being delivered from the fear of our enemies. Might
+		serve him in holiness and righteousness before him all the days of
+		our life.
+		\pagebreak
+		\abr{Glory.}
+		\item And you, child, will be called the prophet of the Highest, for you
+		will go before the Lord to prepare his ways. To give knowledge of
+		salvation to his people by the forgiveness of their sins through the
+		tender mercy of our God.
+		\abr{Both now.}
+		\item  By which the Dayspring from on high has visited us, to appear to
+		those who sit in darkness and in the shadow of death. To guide our feet
+		into the way of peace.
+	}
+	\rest
+	\vspace{-1.5em}
 	\instruction{
 		After the Hermos of the 9th Ode, we make a full prostration and sing
 		the following.
@@ -821,26 +854,22 @@
 		and beyond compare more glorious than the Seraphim, without corruption you
 		gave birth to God the Word; truly the Mother of God, we magnify you.
 	}
-	\rest
-	\shortlitany\pagebreak
-	\subsection{Exapostilaria and Praises}
+	\shortlitany
+	\pagebreak
+	\subsection{Exapostilaria}
+	\instruction{
+		When none are appointed in the Menaion or Ochtoechos.
+	}
 	\begin{multicols}{2}
-		\instruction{
-			When none are appointed in the Menaion or Ochtoechos.
-		}
-		\subheading{Monday}
+		\subheading{Monday and Tuesday}
 		\entry{
 			As God you adorned the heavens with stars, and through your Angels You
 			lead the whole earth to the light, O Creator of all things save those who hymn
 			You.
-			\item Sweetness of the Angels, joy of the afflicted, protectress of Christians, Virgin
-			Mother of the Lord, help me and deliver me from eternal tortures.
-		}
-		\subheading{Tuesday}
-		\entry{
-			Let us all hymn John the Forerunner and Baptist of the Saviour, Prophet
+			\item Let us all hymn John the Forerunner and Baptist of the Saviour, Prophet
 			among the Prophets, nurseling of the desert, offspring of Elisabeth.
-			\item Sweetness of the Angels \alt{...}
+			\item Sweetness of the Angels, joy of the afflicted, protectress of Christians,
+			Virgin Mother of the Lord, help me and deliver me from eternal tortures.
 		}
 		\subheading{Wednesday and Friday}
 		\entry{
@@ -866,12 +895,305 @@
 		}
 		\subheading{Saturday}
 		\entry{
-			As God you have power over the living and the dead, and through your Angels you lead the whole earth to the light, O Creator of all things save those
-			who sing your praise.
+			As God you have power over the living and the dead, and through your Angels you
+			lead the whole earth to the light, O Creator of all things save those who sing
+			your praise.
 			\item In you we boast, Mother of God, and you we have as advocate before God:
 			stretch out your invincible hand and trounce our foes, send forth your help to
 			your servants from the holy place.
 		}
 	\end{multicols}
+	\vspace{1em}
+	\subsection{Praises}
+	\psalm{148}{
+		\alt{[A]} Praise the Lord from the heavens; praise him in the highest.
+		To you praise due, O God.\item
+		\alt{[B]} Praise him, all his angels: Praise him, all his Powers. To you
+		praise is due, O God.\item
+		\alt{[A]} Praise the Lord from the heavens; praise him in the highest. To you
+		praise is due, O God.\item
+		\alt{[B]} Praise him, all his angels: Praise him, all his Powers. To you
+		praise is due, O God.\item
+		\alt{[A]} Praise him, sun and moon; praise him, all you stars and light.\item
+		\alt{[B]} Praise him, you highest heavens and you waters that are above the
+		heavens. Let them praise the name of the Lord.\item
+		\alt{[A]} For he spoke and they came into being; he commanded and they were
+		created.\item
+		\alt{[B]} He established them for ever and ever; he made an ordinance, and
+		it shall not pass away.\item
+		\alt{[A]} Praise the Lord from the earth; praise him, you sea-monsters and
+		all deeps;\item
+		\alt{[B]} Fire and hail, snow and ice and storm-wind; things that do his
+		word.\item
+		\alt{[A]} Mountains and all hills, fruiting trees and all cedars;\item
+		\alt{[B]} Beasts of the wild, and all cattle, creeping things and winged
+		birds;\item
+		\alt{[A]} Kings of the earth and all peoples, rulers and all judges of
+		the earth;\item
+		\alt{[B]} Young men and maidens: old men and youths together, let them
+		praise the name of the Lord; for his name alone has been exalted.\item
+		\alt{[A]} His praise is above earth and heaven, and he will exalt the
+		horn of his people.\item
+		\alt{[B]} A hymn for all his holy ones; for the children of Israel,
+		a people that draws near him.\item
+	}
+	\psalm{149}{
+		\alt{[A]} Sing to the Lord a new song, his praise in the Church of the holy
+		ones.\item
+		\alt{[B]} Let Israel rejoice in him that made him, let the children of Sion
+		be joyful in their king.\item
+		\alt{[A]} Let them praise his name in the dance; let them sing his praise
+		with timbrel and with harp.\item
+		\alt{[B]} For the Lord is well-pleased with his people; he will exalt the
+		meek with salvation.\item
+		\alt{[A]} His holy ones will exult in glory, and rejoice upon their beds.\item
+		\alt{[B]} The high praises of God in their mouths, and two-edged swords in
+		their hands,\item
+		\alt{[A]} To exact vengeance among the nations, punishments among the
+		peoples.\item
+		\alt{[B]} To bind their kings in fetters; and their nobles in shackles of
+		iron.\item
+		\alt{[A]} To execute upon them the judgement that is decreed; such glory
+		will be for all his holy ones.\item
+	}
+	\psalm{150}{
+		\alt{[B]} Praise God in his saints; praise him in the firmament of his
+		power.\item
+		\alt{[A]} Praise him for his mighty acts; praise him according to the
+		greatness of his majesty.\item
+		\alt{[B]} Praise him with the sound of the trumpet; praise him with lute
+		and harp.\item
+		\alt{[A]} Praise him with timbrel and dance; praise him with strings and
+		pipe.\item
+		\alt{[B]} Praise him with tuneful cymbals; praise him with loud cymbals.
+		Let everything that has breath praise the Lord.\item
+	}
+	\abr{
+		\alt{[A]} \glory.\\
+		\alt{[B]} \bothnow.
+	}
+	\begin{multicols}{2}
+		\entry[Reader]{
+			To you glory is due, Lord our God, and to you we give glory, Father, Son and
+			Holy Spirit, now and for ever, and to the ages of ages. Amen.
+			\item Glory to God in the highest, and on earth peace, goodwill among men. We
+			praise you, we bless you, we worship you, we glorify you, we give you thanks
+			for your great glory. Lord, King, God of heaven, Father almighty: Lord,
+			only-begotten Son, Jesus Christ and Holy Spirit. Lord God, Lamb of God, Son of
+			the Father, who take away the sin of the world, have mercy on us; you take
+			away the sins of the world. Receive our prayer, you who sit on the right hand
+			of the Father, and have mercy on us. For you alone are holy, you alone are
+			Lord, Jesus Christ, to the glory of God the Father. Amen.
+			\item Every day I will bless you, and praise your name for ever and to the ages of
+			ages. Lord, you have been our refuge from generation to generation.\\I said,
+			Lord, have mercy on me, heal my soul, for I have sinned against you. Lord, I
+			have run to you for refuge: teach me to do your will, for you are my God. For
+			with you is the source of life: and in your light we shall see light. Continue
+			your mercy towards those who know you.
+			\item Grant, Lord, this day to keep us without sin. Blessed are you, O Lord, the God
+			of our fathers, and praised and glorified your name to the ages. Amen. May
+			your mercy, O Lord, be upon us, as we have put our hope in you. Blessed are
+			you, Lord, teach me your statutes. Blessed are you, Master, make me understand
+			your statutes. Blessed are you, Holy One, enlighten me with your statutes.
+			Lord, your mercy is for ever; do not scorn the work of your hands. To
+			you praise is due, to you song is due, to you glory is due, Father, Son and
+			Holy Spirit, now and for ever, and to the ages of ages. Amen.
+		}
+	\end{multicols}
+	\rest
+	\subheading{Litany of Fervent Intercession}
+	\entry[Priest]{
+		Let us complete our morning prayer to the Lord
+	}
+	\entry[People]{
+		Lord, have mercy.\andsoafter
+	}
+	\entry[Priest]{
+		Help us, save us, have mercy on us and keep us, O God, by your grace.
+		\item That the whole day may be perfect, holy, peaceful and sinless, let us ask of the
+		Lord.
+	}
+	\entry[People]{
+		Grant this, O Lord.\andsoafter
+	}
+	\entry[Priest]{
+		An angel of peace, a faithful guide, a guardian of our souls and bodies,
+		let us ask of the Lord.
+		\item Pardon and forgiveness of our sins and offences, let us ask of the Lord.
+		\item Things good and profitable for our souls, and peace for the world, let us ask
+		of the Lord.
+		\item That we may live out the rest of our days in peace and repentance, let us ask
+		of the Lord.
+		\item A Christian end to our life, painless, unashamed and peaceful, and a good defence before the dread judgement seat of Christ, let us ask.
+		\item Commemorating our all-holy, pure, most blessed and glorious Lady, Mother
+		of God and Ever-Virgin Mary, with all the Saints, let us entrust ourselves and
+		one another and our whole life to Christ our God.
+	}
+	\entry[People]{
+		To you, O Lord.
+	}
+	\entry[Priest]{
+		For you are a God of mercy, compassion and love towards mankind,
+		and to you we give glory, to the Father, the Son and the Holy Spirit, now and
+		for ever, and to the ages of ages.
+	}
+	\entry[People]{
+		Amen.
+	}
+	\entry[Priest]{
+		Peace to all.
+	}
+	\entry[People]{
+		And to your spirit.
+	}
+	\entry[Priest]{
+		Let us bow our heads to the Lord.
+	}
+	\entry[People]{
+		To you, O Lord.
+	}
+	\subheading{Prayer at the Bowing of Heads}
+	\entry[Priest]{
+		Holy Lord, dwelling on high and beholding things below
+		and, with your eye that observes all, keeping watch over the whole creation,
+		to you we have bowed the neck of our soul and body, and we beseech you, O
+		Holy of Holies: Stretch forth your invisible hand from your holy dwelling and
+		bless us all. And, as you are good and love mankind, pardon us if we have
+		sinned in anything, voluntarily or involuntarily, granting us your blessings
+		both of this world and of the world above. \altit{(In a low voice)}
+		\item For yours it is to have mercy and to save us, O our God, and to you
+		we give glory, to the Father, the Son and the Holy Spirit, now and for ever,
+		and to the ages of ages. \altit{(Aloud)}
+	}
+	\entry[People]{
+		Amen.
+	}
+	\pagebreak
+	\subsection{Aposticha and Apolytikion}
+	\subheading{Monday to Friday.}
+	\entry{
+		\alt{Refrain I:} We have been filled in the morning with your mercy, Lord, we have
+		rejoiced and been glad. In all our day let us be glad, in return for the days
+		when you humbled us, for the years when we saw evils. And look on your
+		servants and on the work of your hands and guide their children.
+	}
+	\entry{
+		\alt{Refrain II:} And may the splendour of the Lord our God be upon us, and direct
+		the work of our hands for us, and direct the work of our hands.
+	}
+	\subheading{Saturday.}
+	\entry{
+		\alt{Refrain I:} Blessed are those whom you have chosen and taken, O Lord; they will
+		dwell in your courts.
+		\item \alt{Refrain II:} Their souls will dwell among good things.
+		\item \alt{Refrain III:} And their memorial is from age to age.
+	}
+	\instruction{
+		We then read the Idiomel, if there is one.
+	}
+	\entry[Reader]{
+		It is good to give thanks to the Lord, to sing praises to your name, O Most
+		High. To declare your love in the morning and your truth every night.
+		\item\trisagion
+	}
+	\entry[Priest]{
+		For yours is the kingdom, the power and the glory, of the Father,
+		the Son and the Holy Spirit, now and for ever, and to the ages of ages.
+	}
+	\instruction{
+		Then Apolytikion of the day. Glory. Both now. And the appropriate Theotokion.
+	}
+	\pagebreak
+	\subsection{Conclusion}
+	\subheading{Litany by the Priest}
+	\entry[Priest]{
+		Have mercy on us, O God, according to your great mercy. We pray you,
+		hear and have mercy.
+	}
+	\entry[People]{
+		\mercy{3} \andsoafter
+	}
+	\entry[Priest]{
+		Also we pray for our Archbishop \alt{N.}, for the honoured order of presbyters, for the diaconate
+		in Christ, for all the clergy and the people, let us pray to the Lord.
+		\item For our sovereign \alt{(lady/lord)}, \alt{N.}, the Royal Family, \alt{(his/her)} Government,
+		and all in authority, let us pray to the Lord.
+		\item For you, O God, are merciful, and love mankind, and to you we give
+		glory, to the Father, the Son and the Holy Spirit, now and for ever and
+		to the ages of ages.
+		\item For our father and superior, Priest-monk \alt{N.}, and all our brotherhood in
+		Christ.
+		\item Also we pray for mercy, life, peace, health, salvation, visitation, pardon and
+		forgiveness of sins for the servants of God, all devout and Orthodox Christians, the benefactors,
+		helpers, worshipers and pilgrims in this holy monastery; \textit{[and for the servants of God \alt{N.}]}
+		and all who have asked for our prayers, unworthy though we are.
+		\item Also we pray for the blessed and ever-remembered founders of this holy
+		monastery, and for all our departed brothers and sisters, Orthodox believers,
+		who have gone to their rest before us and who here and in all the world lie
+		asleep in the Lord; \textit{[and for the servants of God \alt{N.}]}
+		and that they may be pardoned all their offences, both voluntary and involuntary.
+		\item Help us, save us, have mercy on us, and keep us, O God, by your grace.
+		\item Commemorating our all-holy, pure, most blessed and glorious Lady, Mother
+		of God and Ever-Virgin Mary, with all the Saints, let us entrust ourselves and
+		one another and our whole life to Christ our God.
+	}
+	\entry[People]{
+		To you, O Lord.
+	}
+	\entry[Priest]{
+		For to you belong all glory, honour and worship, to the Father, the Son and the
+		Holy Spirit, now and for ever, and to the ages of ages.
+	}
+	\entry[People]{
+		Amen.
+	}
+	\pagebreak
+	\subheading{Dismissal}
+	\entry[Priest]{
+		Wisdom.
+	}
+	\entry[People]{
+		Holy Father give the blessing.
+	}
+	\entry[Priest]{
+		Blessed is He Who Is, Christ our true God, always, now and for ever,
+		and to the ages of ages.
+	}
+	\entry[Reader]{
+		Amen. May the Lord God strengthen the holy and pure faith of devout
+		and orthodox Christians, with his holy Church and this sacred Monastery, to
+		ages of ages.
+	}
+	\entry[Priest]{
+		Most holy Mother of God, save us.
+	}
+	\entry[Reader]{
+		Greater in honour than the Cherubim, and beyond compare more glorious
+		than the Seraphim, without corruption you gave birth to God the Word;
+		truly the Mother of God, we magnify you.
+		\item \glorybothnow
+		\item \mercy{3}
+		\item Holy Father give the blessing.
+	}
+	\instruction{
+		And the Priest, lowering the Phelonion, continues.
+	}
+	\entry[Priest]{
+		May Christ our true God, at the prayers of his most pure and holy Mother; of the holy,
+		glorious and all-praised Apostles; of Saint \alt{N. (patron of the church)},
+		of Saint \alt{N.}, whose memory we celebrate today; of the holy and righteous
+		forebears of God, Joachim and Anne. And of all the Saints, have mercy on us and
+		save us, for he is good and loves mankind.
+	}
+	\entry[People]{
+		Amen.
+	}
+	\entry[Priest]{
+		Through the prayers of our holy Fathers, Lord Jesus Christ our God,
+		have mercy on us.
+	}
+	\entry[People]{
+		Amen.
+	}
 \end{service}
 \end{document}
