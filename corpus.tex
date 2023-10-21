@@ -6,7 +6,7 @@
 
 \linespread{1.2}
 \setlength{\parindent}{0pt}%
-%\setlength{\parskip}{\baselineskip}%
+\setlength{\parskip}{\baselineskip}%
 
 
 % Packages
@@ -17,14 +17,6 @@
 \usepackage{xcolor}
 
 \begin{document}
-% Commands for service text
-\newenvironment{service}{%
-	\begin{trivlist}%
-		\setlength\itemsep{1em}%
-		}{%
-	\end{trivlist}%
-}
-
 \newcommand{\alt}[1]{\begin{color}{red}#1\end{color}}
 
 \newcommand{\altit}[1]{\alt{\textit{#1}}}
@@ -34,35 +26,21 @@
 	\columnbreak%
 }
 
-\newcommand{\entry}[2][]{%
-	\item\ifthenelse{\isempty{#1}}%
-	{#2}%
-	{\textbf{#1:} #2}%
-}
+\newcommand{\entry}[2][]{\textbf{#1:}}
 
-\newcommand{\abr}[1]{%
-	\begin{center}\vspace{-1.5em}\item\textit{#1}\end{center}%
-}
+\newcommand{\abr}[1]{\begin{center}\vspace{-1.5em}\textit{#1}\end{center}}
 
-\newcommand{\rest}{%
-	\begin{center}\vspace{-2em}\item\alt{\textbf{. . .}}\end{center}%
-}
+\newcommand{\rest}{\begin{center}\vspace{-2em}\alt{\textbf{. . .}}\end{center}}
 
 \newcommand{\andagain}{\vspace{-0.1em}\abr{\alt{And again.}}}
 
 \newcommand{\andsoafter}{ \alt{\textit{And so after each petition.}}}
 
-\newcommand{\instruction}[1]{\item\alt{\vspace{1em}\textit{#1}\vspace{1em}}}
+\newcommand{\instruction}[1]{\alt{\vspace{1em}\textit{#1}\vspace{1em}}}
 
-\newcommand{\psalm}[2]{%
-	\item\textbf{Psalm #1}\\%
-	#2%
-}
+\newcommand{\pheading}{1}{\textbf{#1}\\}
 
-\newcommand{\model}[2]{%
-	\item\textbf{#1}%
-	\item#2%
-}
+\newcommand{\psalm}[1]{\pheading{Psalm #1}}
 
 \newcommand{\cannon}[3][]{%
 	\ifthenelse{\isempty{#1}}%
@@ -142,7 +120,6 @@
 \section{The Service of Matins}
 \subsection{Introduction}
 \label{matins-intro}
-\begin{service}
 	\instruction{
 		After the Dismissal of the Midnight Office the Priest,
 		having made the customary metania to the Superior, or to his stall,
@@ -1197,5 +1174,4 @@
 	\entry[People]{
 		Amen.
 	}
-\end{service}
 \end{document}
